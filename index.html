@@ -1,161 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Jaswanth Reddy Akkamreddygari Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <!-- Bootstrap & Font Awesome -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <style>
+<head>
+	<title>Jaswanth Reddy Akkamreddygari Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Bootstrap & Font Awesome -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+	<style>
 		:root {
-		  --bg-dark: #1a1c2c;           /* Softer navy */
-		  --bg-light: #f0f4f8;          /* Light pastel blue */
-		  --text-dark: #ffffff;
-		  --text-light: #121212;
-		  --accent-color: #6c63ff;
-		  --transition: 0.3s ease-in-out;
+			--bg-dark: #1a1c2c;
+			/* Softer navy */
+			--bg-light: #f0f4f8;
+			/* Light pastel blue */
+			--text-dark: #ffffff;
+			--text-light: #121212;
+			--accent-color: #6c63ff;
+			--transition: 0.3s ease-in-out;
 		}
-	  
+
 		body {
-		  font-family: 'Poppins', sans-serif;
-		  background-color: var(--bg-dark);
-		  color: var(--text-dark);
-		  transition: var(--transition);
+			font-family: 'Poppins', sans-serif;
+			background-color: var(--bg-dark);
+			color: var(--text-dark);
+			transition: var(--transition);
 		}
-	  
+
 		body.light-mode {
-		  background-color: var(--bg-light);
-		  color: var(--text-light);
+			background-color: var(--bg-light);
+			color: var(--text-light);
 		}
-	  
+
 		/* Navbar colors */
 		.navbar {
-		  backdrop-filter: blur(10px);
-		  background-color: rgba(0, 0, 0, 0.75) !important;
+			backdrop-filter: blur(10px);
+			background-color: rgba(0, 0, 0, 0.75) !important;
 		}
-	  
+
 		body.light-mode .navbar {
-		  background-color: rgba(255, 255, 255, 0.95) !important;
+			background-color: rgba(255, 255, 255, 0.95) !important;
 		}
-	  
+
 		.navbar-brand,
 		.nav-link {
-		  color: var(--text-dark) !important;
+			color: var(--text-dark) !important;
 		}
-	  
+
 		body.light-mode .navbar-brand,
 		body.light-mode .nav-link {
-		  color: var(--text-light) !important;
+			color: var(--text-light) !important;
 		}
-	  
+
 		.theme-toggle {
-		  background: none;
-		  border: none;
-		  font-size: 1.2rem;
-		  color: var(--text-dark);
+			background: none;
+			border: none;
+			font-size: 1.2rem;
+			color: var(--text-dark);
 		}
-	  
+
 		body.light-mode .theme-toggle {
-		  color: var(--text-light);
+			color: var(--text-light);
 		}
-	  
+
 		/* Hero */
 		.hero {
-		  position: relative;
-		  background: none;
-		  padding-top: 100px;
-		  padding-bottom: 50px;
+			position: relative;
+			background: none;
+			padding-top: 100px;
+			padding-bottom: 50px;
 		}
-	  
+
 		.hero::before {
-		  content: "";
-		  position: absolute;
-		  top: 0; left: 0;
-		  width: 100%; height: 100%;
-		  background: rgba(0, 0, 0, 0.6);
-		  z-index: -1;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.6);
+			z-index: -1;
 		}
-	  
+
 		#typing-animation {
-		  font-size: 30px;
-		  font-weight: bold;
-		  overflow: hidden;
-		  white-space: nowrap;
+			font-size: 30px;
+			font-weight: bold;
+			overflow: hidden;
+			white-space: nowrap;
 		}
-	  
+
 		/* Scroll/Video/Image sections */
 		.media-container {
-		  display: flex;
-		  flex-wrap: wrap;
-		  gap: 20px;
-		  margin-top: 30px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+			margin-top: 30px;
 		}
-	  
-		.video-container, .image-slider {
-		  flex: 1;
-		  min-width: 300px;
-		  border-radius: 15px;
-		  overflow: hidden;
-		  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+		.video-container,
+		.image-slider {
+			flex: 1;
+			min-width: 300px;
+			border-radius: 15px;
+			overflow: hidden;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 		}
-	  
+
 		.carousel-item img {
-		  height: 100%;
-		  object-fit: cover;
+			height: 100%;
+			object-fit: cover;
 		}
-	  
+
 		.carousel-item::before {
-		  content: "";
-		  position: absolute;
-		  top: 0; left: 0;
-		  width: 100%; height: 100%;
-		  background: rgba(0,0,0,0.3);
-		  z-index: 1;
-		}
-	  
-		@media (max-width: 768px) {
-		  .media-container {
-			flex-direction: column;
-		  }
-		  .video-container, .image-slider {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
-		  }
-		  #typing-animation {
-			font-size: 24px;
-		  }
+			height: 100%;
+			background: rgba(0, 0, 0, 0.3);
+			z-index: 1;
 		}
-	  
-		#resume-section, #about-section {
-		  background-color: rgba(255, 255, 255, 0.05);
-		  border-radius: 10px;
-		  padding: 40px;
-		  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+
+		@media (max-width: 768px) {
+			.media-container {
+				flex-direction: column;
+			}
+
+			.video-container,
+			.image-slider {
+				width: 100%;
+			}
+
+			#typing-animation {
+				font-size: 24px;
+			}
 		}
-	  
+
+		#resume-section,
+		#about-section {
+			background-color: rgba(255, 255, 255, 0.05);
+			border-radius: 10px;
+			padding: 40px;
+			box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+		}
+
 		.video-container .bg-dark {
-		  background-color: rgba(0, 0, 0, 0.8) !important;
+			background-color: rgba(0, 0, 0, 0.8) !important;
 		}
-	  
+
 		.carousel-inner::after {
-		  content: "";
-		  position: absolute;
-		  top: 0; left: 0;
-		  width: 100%; height: 100%;
-		  background: rgba(0,0,0,0.3);
-		  z-index: 1;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.3);
+			z-index: 1;
 		}
-	  
+
 		.ftco-footer {
-		  background: #111;
-		  color: #fff;
+			background: #111;
+			color: #fff;
 		}
-	  
+
 		/* Dark mode visibility fix */
 		body:not(.light-mode),
 		body:not(.light-mode) p,
@@ -164,132 +178,184 @@
 		body:not(.light-mode) li,
 		body:not(.light-mode) .text-muted,
 		body:not(.light-mode) .text-secondary {
-		  color: #ffffff !important;
+			color: #ffffff !important;
 		}
-	  
+
 		body:not(.light-mode) h1,
 		body:not(.light-mode) h2,
 		body:not(.light-mode) h3,
 		body:not(.light-mode) h4,
 		body:not(.light-mode) h5,
 		body:not(.light-mode) h6 {
-		  color: #f1f1f1 !important;
+			color: #f1f1f1 !important;
 		}
-	  
+
 		.text-muted,
 		.text-secondary {
-		  color: rgba(255, 255, 255, 0.7) !important;
+			color: rgba(255, 255, 255, 0.7) !important;
 		}
-	  
+
 		body:not(.light-mode) a {
-		  color: #9cd3ff !important;
+			color: #9cd3ff !important;
 		}
-	  
+
 		/* Buttons */
-		.btn-primary, .btn-outline-light, .btn-outline-white {
-		  font-weight: bold;
-		  border-radius: 10px;
-		  font-size: 1rem;
+		.btn-primary,
+		.btn-outline-light,
+		.btn-outline-white {
+			font-weight: bold;
+			border-radius: 10px;
+			font-size: 1rem;
 		}
-	  
+
 		.bg-body-tertiary {
-		  background-color: rgba(255, 255, 255, 0.03) !important;
+			background-color: rgba(255, 255, 255, 0.03) !important;
 		}
 
 		/* Floating effect for project/resume cards */
-.card,
-.project-card,
-.resume-wrap {
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 16px;
-  background-color: rgba(255, 255, 255, 0.04);
-  overflow: hidden;
-  z-index: 1;
-}
+		.card,
+		.project-card,
+		.resume-wrap {
+			position: relative;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			border-radius: 16px;
+			background-color: rgba(255, 255, 255, 0.04);
+			overflow: hidden;
+			z-index: 1;
+		}
 
-.card:hover,
-.project-card:hover,
-.resume-wrap:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-  z-index: 10;
-}
+		.card:hover,
+		.project-card:hover,
+		.resume-wrap:hover {
+			transform: translateY(-10px) scale(1.02);
+			box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+			z-index: 10;
+		}
 
-/* Subtle inner glow */
-.card:hover::after,
-.project-card:hover::after,
-.resume-wrap:hover::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 70%);
-  z-index: -1;
-}
+		/* Subtle inner glow */
+		.card:hover::after,
+		.project-card:hover::after,
+		.resume-wrap:hover::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: radial-gradient(circle at center, rgba(255, 255, 255, 0.04), transparent 70%);
+			z-index: -1;
+		}
 
-/* Ensure text and spacing inside looks good */
-.card-body {
-  padding: 1.5rem;
-}
-.card:hover,
-.project-card:hover,
-.resume-wrap:hover {
-  transform: perspective(1000px) rotateX(3deg) scale(1.015);
-}
+		/* Ensure text and spacing inside looks good */
+		.card-body {
+			padding: 1.5rem;
+		}
 
-	  </style>
-	  
-  </head>
+		.card:hover,
+		.project-card:hover,
+		.resume-wrap:hover {
+			transform: perspective(1000px) rotateX(3deg) scale(1.015);
+		}
+	</style>
 
-  <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
 	<!-- Modal for Valqari Project -->
-<div class="modal fade" id="valqariModal" tabindex="-1" aria-labelledby="valqariModalLabel" aria-hidden="true">
+	<div class="modal fade" id="valqariModal" tabindex="-1" aria-labelledby="valqariModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content bg-dark text-white">
+				<div class="modal-header border-0">
+					<h5 class="modal-title" id="valqariModalLabel">MediValAir – Project Showcase</h5>
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<p><strong>Description:</strong> Object detection powered by YOLOv8, deployed on Raspberry Pi with
+						Pi-Cam integration.</p>
+
+					<!-- Video Section -->
+					<div class="row g-4 mb-4">
+						<div class="col-md-6">
+							<div class="ratio ratio-16x9">
+								<video class="rounded" controls poster="images/video-poster1.jpg">
+									<source src="images/Picam_with_yoloTinyV4.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<p class="mt-3 small">YOLOv4 Tiny model optimized for Raspberry Pi5. Achieved high FPS and
+								accuracy.</p>
+						</div>
+						<div class="col-md-6">
+							<div class="ratio ratio-16x9">
+								<video class="rounded" controls poster="images/video-poster.jpg">
+									<source src="images/DronePathWithCameraView.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<p class="mt-3 small">Drone trained with reinforcement learning to navigate autonomously and
+								avoid obstacles.</p>
+						</div>
+					</div>
+
+					<!-- Image Gallery -->
+					<div class="row g-3">
+						<div class="col-md-4">
+							<img src="images/yolo-training.png" class="img-fluid rounded shadow-sm" alt="YOLO Training">
+						</div>
+						<div class="col-md-4">
+							<img src="images/detection-live.jpg" class="img-fluid rounded shadow-sm"
+								alt="Live Detection">
+						</div>
+						<div class="col-md-4">
+							<img src="images/comparisions.jpg" class="img-fluid rounded shadow-sm"
+								alt="Model Comparison">
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer border-0">
+					<button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal: MinuteClinic Project -->
+<div class="modal fade" id="minuteClinicModal" tabindex="-1" aria-labelledby="minuteClinicModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-xl modal-dialog-centered">
 	  <div class="modal-content bg-dark text-white">
 		<div class="modal-header border-0">
-		  <h5 class="modal-title" id="valqariModalLabel">MediValAir – Project Showcase</h5>
+		  <h5 class="modal-title" id="minuteClinicModalLabel">MinuteClinic – .NET Web App</h5>
 		  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
+		  <p><strong>Overview:</strong> Built using ASP.NET Core MVC and SQL Server, this web app enables real-time management of clinic data, vaccine inventory, and patient scheduling.</p>
   
-		  <p><strong>Description:</strong> Object detection powered by YOLOv8, deployed on Raspberry Pi with Pi-Cam integration.</p>
-  
-		  <!-- Video Section -->
-		  <div class="row g-4 mb-4">
+		  <div class="row g-4">
+			<!-- Screenshot or Video -->
 			<div class="col-md-6">
 			  <div class="ratio ratio-16x9">
-				<video class="rounded" controls poster="images/video-poster1.jpg">
-				  <source src="images/Picam_with_yoloTinyV4.mp4" type="video/mp4">
+				<video class="rounded" controls poster="images/minuteclinic-poster.jpg">
+				  <source src="images/minuteClinic.mp4" type="video/mp4">
 				  Your browser does not support the video tag.
 				</video>
 			  </div>
-			  <p class="mt-3 small">YOLOv4 Tiny model optimized for Raspberry Pi5. Achieved high FPS and accuracy.</p>
+			  <p class="mt-3 small">Live demo showcasing admin login, vaccine list management, and patient appointment flow.</p>
 			</div>
+  
+			<!-- Description -->
 			<div class="col-md-6">
-			  <div class="ratio ratio-16x9">
-				<video class="rounded" controls poster="images/video-poster.jpg">
-				  <source src="images/DronePathWithCameraView.mp4" type="video/mp4">
-				  Your browser does not support the video tag.
-				</video>
-			  </div>
-			  <p class="mt-3 small">Drone trained with reinforcement learning to navigate autonomously and avoid obstacles.</p>
+			  <ul class="list-unstyled small">
+				<li><i class="fas fa-check-circle text-success me-2"></i> Role-based login for Admin & Patients</li>
+				<li><i class="fas fa-check-circle text-success me-2"></i> Full CRUD operations using EF Core</li>
+				<li><i class="fas fa-check-circle text-success me-2"></i> Bootstrap 5 for modern UI/UX</li>
+				<li><i class="fas fa-check-circle text-success me-2"></i> Vaccine scheduling with validation</li>
+			  </ul>
+			  <p class="mt-3"><strong>Tech Stack:</strong> ASP.NET Core MVC, Entity Framework, SQL Server, Bootstrap 5, C#</p>
 			</div>
 		  </div>
-  
-		  <!-- Image Gallery -->
-		  <div class="row g-3">
-			<div class="col-md-4">
-			  <img src="images/yolo-training.png" class="img-fluid rounded shadow-sm" alt="YOLO Training">
-			</div>
-			<div class="col-md-4">
-			  <img src="images/detection-live.jpg" class="img-fluid rounded shadow-sm" alt="Live Detection">
-			</div>
-			<div class="col-md-4">
-			  <img src="images/comparisions.jpg" class="img-fluid rounded shadow-sm" alt="Model Comparison">
-			</div>
-		  </div>
-  
 		</div>
 		<div class="modal-footer border-0">
 		  <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
@@ -298,70 +364,73 @@
 	</div>
   </div>
   
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="navbar">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Jaswanth Reddy</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#home-section">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#resume-section">Resume</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
-          </ul>
-          <button class="theme-toggle ms-3" onclick="toggleTheme()" title="Toggle Light/Dark Mode">
-            <i class="fas fa-moon" id="themeIcon"></i>
-          </button>
-        </div>
-      </div>
-    </nav>
-    <!-- Hero Section -->
-    <section id="home-section" class="hero d-flex align-items-center vh-100 position-relative">
+
+	<nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="navbar">
+		<div class="container">
+			<a class="navbar-brand fw-bold" href="#">Jaswanth Reddy</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link" href="#home-section">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="#resume-section">Resume</a></li>
+					<li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+				</ul>
+				<button class="theme-toggle ms-3" onclick="toggleTheme()" title="Toggle Light/Dark Mode">
+					<i class="fas fa-moon" id="themeIcon"></i>
+				</button>
+			</div>
+		</div>
+	</nav>
+	<!-- Hero Section -->
+	<section id="home-section" class="hero d-flex align-items-center vh-100 position-relative">
 		<div class="container text-center z-2">
-		  <h1 class="display-4 fw-bold">I'm <span class="text-accent">Jaswanth Reddy</span></h1>
-		  <p id="typing-animation" class="lead"></p>
-		  <h2 class="mt-2">A Senior Analyst</h2>
-		  <div class="mt-4">
-			<a href="https://github.com/jaswanthreddya?tab=repositories" class="btn btn-outline-light me-3">
-			  <i class="fab fa-github me-2"></i> My Works
-			</a>
-			<a href="#contact-section" class="btn btn-primary">
-			  <i class="fas fa-paper-plane me-2"></i> Contact Me
-			</a>
-		  </div>
+			<h1 class="display-4 fw-bold">I'm <span class="text-accent">Jaswanth Reddy</span></h1>
+			<p id="typing-animation" class="lead"></p>
+			<h2 class="mt-2">A Senior Analyst</h2>
+			<div class="mt-4">
+				<a href="https://github.com/jaswanthreddya?tab=repositories" class="btn btn-outline-light me-3">
+					<i class="fab fa-github me-2"></i> My Works
+				</a>
+				<a href="#contact-section" class="btn btn-primary">
+					<i class="fas fa-paper-plane me-2"></i> Contact Me
+				</a>
+			</div>
 		</div>
-  
+
 		<!-- Background Slider -->
-		<div id="bgSlider" class="carousel slide position-absolute w-100 h-100 top-0 start-0 z-0" data-bs-ride="carousel">
-		  <div class="carousel-inner h-100">
-			<div class="carousel-item active">
-			  <img src="images/slide1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Slide 1">
+		<div id="bgSlider" class="carousel slide position-absolute w-100 h-100 top-0 start-0 z-0"
+			data-bs-ride="carousel">
+			<div class="carousel-inner h-100">
+				<div class="carousel-item active">
+					<img src="images/slide1.jpg" class="d-block w-100 h-100 object-fit-cover" alt="Slide 1">
+				</div>
+				<div class="carousel-item">
+					<img src="images/slide2.JPEG" class="d-block w-100 h-100 object-fit-cover" alt="Slide 2">
+				</div>
 			</div>
-			<div class="carousel-item">
-			  <img src="images/slide2.JPEG" class="d-block w-100 h-100 object-fit-cover" alt="Slide 2">
-			</div>
-		  </div>
 		</div>
-	  </section>
-  
-	  <!-- Floating Social Icons -->
-	  <div class="position-fixed top-50 start-0 translate-middle-y d-flex flex-column z-3 ms-2">
-		<a href="https://linkedin.com/in/jaswanth-akkamreddy/" class="text-white mb-3"><i class="fab fa-linkedin fa-lg"></i></a>
+	</section>
+
+	<!-- Floating Social Icons -->
+	<div class="position-fixed top-50 start-0 translate-middle-y d-flex flex-column z-3 ms-2">
+		<a href="https://linkedin.com/in/jaswanth-akkamreddy/" class="text-white mb-3"><i
+				class="fab fa-linkedin fa-lg"></i></a>
 		<a href="https://github.com/jaswanthreddya" class="text-white mb-3"><i class="fab fa-github fa-lg"></i></a>
 		<a href="mailto:av.jaswanth@gmail.com" class="text-white"><i class="fas fa-envelope fa-lg"></i></a>
-	  </div>
-  
-	  <!-- Scroll Down Prompt -->
-	  <div class="text-center position-absolute bottom-0 start-50 translate-middle-x mb-3 z-2">
+	</div>
+
+	<!-- Scroll Down Prompt -->
+	<div class="text-center position-absolute bottom-0 start-50 translate-middle-x mb-3 z-2">
 		<a href="#about-section" class="btn btn-outline-light rounded-pill px-4 py-2">
-		  <i class="fas fa-chevron-down fa-bounce"></i> Scroll Down
+			<i class="fas fa-chevron-down fa-bounce"></i> Scroll Down
 		</a>
-	  </div>
-  
-	  <!-- Typing Animation Script -->
-	  <script>
+	</div>
+
+	<!-- Typing Animation Script -->
+	<script>
 		const typingEl = document.getElementById('typing-animation');
 		const textArray = ['AI/ML Engineer', 'Full Stack Developer', 'Data Analyst', 'Drone Vision Expert'];
 		let textIndex = 0;
@@ -369,273 +438,304 @@
 		let typingDelay = 100;
 		let erasingDelay = 50;
 		let newTextDelay = 2000;
-  
+
 		function type() {
-		  if (charIndex < textArray[textIndex].length) {
-			typingEl.textContent += textArray[textIndex].charAt(charIndex++);
-			setTimeout(type, typingDelay);
-		  } else {
-			setTimeout(erase, newTextDelay);
-		  }
+			if (charIndex < textArray[textIndex].length) {
+				typingEl.textContent += textArray[textIndex].charAt(charIndex++);
+				setTimeout(type, typingDelay);
+			} else {
+				setTimeout(erase, newTextDelay);
+			}
 		}
-  
+
 		function erase() {
-		  if (charIndex > 0) {
-			typingEl.textContent = textArray[textIndex].substring(0, charIndex - 1);
-			charIndex--;
-			setTimeout(erase, erasingDelay);
-		  } else {
-			textIndex = (textIndex + 1) % textArray.length;
-			setTimeout(type, typingDelay + 300);
-		  }
+			if (charIndex > 0) {
+				typingEl.textContent = textArray[textIndex].substring(0, charIndex - 1);
+				charIndex--;
+				setTimeout(erase, erasingDelay);
+			} else {
+				textIndex = (textIndex + 1) % textArray.length;
+				setTimeout(type, typingDelay + 300);
+			}
 		}
-  
+
 		document.addEventListener('DOMContentLoaded', () => {
-		  if (textArray.length) setTimeout(type, newTextDelay);
+			if (textArray.length) setTimeout(type, newTextDelay);
 		});
-	  </script>
-<!-- About Section -->
-<section id="about-section" class="py-5">
-	<div class="container">
-	  <div class="text-center mb-5">
-		<h2 class="fw-bold display-5">About Me</h2>
-		<p class="text-muted">A passionate developer bridging AI, software, and business solutions</p>
-	  </div>
-	  <div class="row g-4">
-		<!-- Left Column (Image & Info) -->
-		<div class="col-md-6">
-		  <div class="card bg-dark border-0 text-white shadow rounded-4">
-			<div class="row g-0 align-items-center">
-			  <div class="col-md-4">
-				<img src="images/about-me.png" alt="Profile" class="img-fluid rounded-start">
-			  </div>
-			  <div class="col-md-8">
-				<div class="card-body">
-				  <h5 class="card-title fw-bold">Jaswanth Reddy Akkamreddygari</h5>
-				  <p class="mb-1"><strong>Role:</strong> AI/ML Engineer, Intern</p>
-				  <p class="mb-1"><strong>Experience:</strong> 4 Years 3 Months</p>
-				  <p class="mb-1"><strong>Location:</strong> Chicago, Illinois, USA</p>
-				  <p class="mb-1"><strong>Languages:</strong> English, Hindi, Telugu</p>
+	</script>
+	<!-- About Section -->
+	<section id="about-section" class="py-5">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2 class="fw-bold display-5">About Me</h2>
+				<p class="text-muted">A passionate developer bridging AI, software, and business solutions</p>
+			</div>
+			<div class="row g-4">
+				<!-- Left Column (Image & Info) -->
+				<div class="col-md-6">
+					<div class="card bg-dark border-0 text-white shadow rounded-4">
+						<div class="row g-0 align-items-center">
+							<div class="col-md-4">
+								<img src="images/image1.jpg" alt="Profile" class="img-fluid rounded-start">
+							</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h5 class="card-title fw-bold">Jaswanth Reddy Akkamreddygari</h5>
+									<p class="mb-1"><strong>Role:</strong> AI/ML Engineer, Intern</p>
+									<p class="mb-1"><strong>Experience:</strong> 4 Years 3 Months</p>
+									<p class="mb-1"><strong>Location:</strong> Chicago, Illinois, USA</p>
+									<p class="mb-1"><strong>Languages:</strong> English, Hindi, Telugu</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			  </div>
+
+				<!-- Right Column (Skills & Highlights) -->
+				<div class="col-md-6">
+					<div class="card bg-dark border-0 text-white shadow rounded-4 p-4">
+						<h5 class="fw-semibold mb-3">Core Skills</h5>
+						<div class="mb-2">
+							<label class="form-label">SQL</label>
+							<div class="progress">
+								<div class="progress-bar bg-success" style="width: 95%">95%</div>
+							</div>
+						</div>
+						<div class="mb-2">
+							<label class="form-label">Python</label>
+							<div class="progress">
+								<div class="progress-bar bg-info" style="width: 85%">85%</div>
+							</div>
+						</div>
+						<div class="mb-2">
+							<label class="form-label">Deep Learning / YOLO</label>
+							<div class="progress">
+								<div class="progress-bar bg-warning" style="width: 90%">90%</div>
+							</div>
+						</div>
+						<div class="mb-2">
+							<label class="form-label">Angular</label>
+							<div class="progress">
+								<div class="progress-bar bg-danger" style="width: 85%">85%</div>
+							</div>
+						</div>
+						<div class="mb-2">
+							<label class="form-label">Machine Learning</label>
+							<div class="progress">
+								<div class="progress-bar bg-primary" style="width: 80%">80%</div>
+							</div>
+						</div>
+						<div class="mb-2">
+							<label class="form-label">Java</label>
+							<div class="progress">
+								<div class="progress-bar bg-secondary" style="width: 80%">80%</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-		  </div>
 		</div>
-  
-		<!-- Right Column (Skills & Highlights) -->
-		<div class="col-md-6">
-		  <div class="card bg-dark border-0 text-white shadow rounded-4 p-4">
-			<h5 class="fw-semibold mb-3">Core Skills</h5>
-			<div class="mb-2">
-			  <label class="form-label">SQL</label>
-			  <div class="progress">
-				<div class="progress-bar bg-success" style="width: 95%">95%</div>
-			  </div>
+	</section>
+	<!-- Resume Section -->
+	<section id="resume-section" class="py-5 bg-body-tertiary">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2 class="fw-bold display-5">Resume</h2>
+				<p class="text-muted">4+ years in full-stack development, AI/ML systems, and scalable web applications
+				</p>
 			</div>
-			<div class="mb-2">
-			  <label class="form-label">Python</label>
-			  <div class="progress">
-				<div class="progress-bar bg-info" style="width: 85%">85%</div>
-			  </div>
+
+			<!-- Experience -->
+			<h4 class="fw-bold mb-4 text-uppercase">Experience</h4>
+			<div class="row g-4">
+				<div class="col-md-6">
+					<div class="card bg-dark text-white h-100 shadow border-0">
+						<div class="card-body">
+							<span class="badge bg-secondary mb-2">Feb 2025 – Present</span>
+							<h5 class="card-title">AI & Computer Vision Intern</h5>
+							<h6 class="text-muted">Valqari, Chicago, IL</h6>
+							<ul class="mt-3 small">
+								<li>Built YOLOv8-based object detection system</li>
+								<li>Trained and deployed CV models on edge devices</li>
+								<li>Optimized inference for Pi + OpenVINO</li>
+							</ul>
+							<p class="mb-1"><strong>Tech:</strong> Python, OpenCV, PyTorch, YOLOv8</p>
+							<p><strong>Deployments:</strong> ONNX, OpenVINO, MNN, NCNN</p>
+							<button class="btn btn-outline-light btn-sm mt-2" data-bs-toggle="modal"
+								data-bs-target="#valqariModal">
+								<i class="fas fa-eye me-1"></i> View Project
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="card bg-dark text-white h-100 shadow border-0">
+						<div class="card-body">
+							<span class="badge bg-secondary mb-2">Oct 2024 – Dec 2024</span>
+							<h5 class="card-title">Full Stack Developer – .NET Project</h5>
+							<h6 class="text-muted">MinuteClinic Web App</h6>
+							<ul class="mt-3 small">
+								<li>Developed appointment system with admin/patient roles</li>
+								<li>Managed vaccines, clinics, and user profiles</li>
+								<li>Implemented login/auth & role-based views</li>
+							</ul>
+							<p class="mb-1"><strong>Tech:</strong> ASP.NET Core MVC, C#, SQL Server, EF Core</p>
+							<p><strong>UI/UX:</strong> Bootstrap 5, Modal Forms, Session/Auth Flow</p>
+							<button class="btn btn-outline-light btn-sm mt-2" data-bs-toggle="modal"
+								data-bs-target="#minuteClinicModal">
+								<i class="fas fa-eye me-1"></i> View Project
+							</button>
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<div class="col-md-6">
+					<div class="card bg-dark text-white h-100 shadow border-0">
+						<div class="card-body">
+							<span class="badge bg-secondary mb-2">Aug 2024 – Dec 2024</span>
+							<h5 class="card-title">Graduate / Teaching Assistant</h5>
+							<h6 class="text-muted">Governors State University</h6>
+							<ul class="mt-3 small">
+								<li>Built Streamlit app for faculty workload analysis</li>
+								<li>Integrated Excel analytics into dashboards</li>
+								<li>Automated reporting pipeline</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="card bg-dark text-white h-100 shadow border-0">
+						<div class="card-body">
+							<span class="badge bg-secondary mb-2">Jan 2021 – Jul 2023</span>
+							<h5 class="card-title">Senior Analyst</h5>
+							<h6 class="text-muted">Capgemini – GE Power and Energy</h6>
+							<ul class="mt-3 small">
+								<li>Built Angular + Spring Boot microservices</li>
+								<li>Integrated REST APIs with MySQL backend</li>
+								<li>Boosted DB response time by 30%</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
 			</div>
-			<div class="mb-2">
-			  <label class="form-label">Deep Learning / YOLO</label>
-			  <div class="progress">
-				<div class="progress-bar bg-warning" style="width: 90%">90%</div>
-			  </div>
+
+			<!-- Education -->
+			<h4 class="fw-bold mt-5 mb-4 text-uppercase">Education</h4>
+			<div class="row g-4">
+				<div class="col-md-6">
+					<div class="card bg-dark text-white shadow border-0 h-100">
+						<div class="card-body">
+							<span class="badge bg-primary mb-2">2023 – 2025</span>
+							<h5 class="card-title">MS in Computer Science</h5>
+							<p class="text-muted mb-0">Governors State University, IL, USA</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="card bg-dark text-white shadow border-0 h-100">
+						<div class="card-body">
+							<span class="badge bg-primary mb-2">2017 – 2021</span>
+							<h5 class="card-title">B.Tech in Computer Science</h5>
+							<p class="text-muted mb-0">Lovely Professional University, India</p>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="mb-2">
-			  <label class="form-label">Angular</label>
-			  <div class="progress">
-				<div class="progress-bar bg-danger" style="width: 85%">85%</div>
-			  </div>
+
+			<!-- CV Button -->
+			<div class="text-center mt-5">
+				<a href="#" class="btn btn-primary btn-lg">
+					<i class="fas fa-download me-2"></i> Download CV
+				</a>
 			</div>
-			<div class="mb-2">
-			  <label class="form-label">Machine Learning</label>
-			  <div class="progress">
-				<div class="progress-bar bg-primary" style="width: 80%">80%</div>
-			  </div>
-			</div>
-			<div class="mb-2">
-			  <label class="form-label">Java</label>
-			  <div class="progress">
-				<div class="progress-bar bg-secondary" style="width: 80%">80%</div>
-			  </div>
-			</div>
-		  </div>
 		</div>
-	  </div>
-	</div>
-  </section>
-<!-- Resume Section -->
-<section id="resume-section" class="py-5 bg-body-tertiary">
-	<div class="container">
-	  <div class="text-center mb-5">
-		<h2 class="fw-bold display-5">Resume</h2>
-		<p class="text-muted">4+ years in full-stack development, AI/ML systems, and scalable web applications</p>
-	  </div>
-  
-	  <!-- Experience -->
-	  <h4 class="fw-bold mb-4 text-uppercase">Experience</h4>
-	  <div class="row g-4">
-		<div class="col-md-6">
-		  <div class="card bg-dark text-white h-100 shadow border-0">
-			<div class="card-body">
-			  <span class="badge bg-secondary mb-2">Feb 2025 – Present</span>
-			  <h5 class="card-title">AI & Computer Vision Intern</h5>
-			  <h6 class="text-muted">Valqari, Chicago, IL</h6>
-			  <ul class="mt-3 small">
-				<li>Built YOLOv8-based object detection system</li>
-				<li>Trained and deployed CV models on edge devices</li>
-				<li>Optimized inference for Pi + OpenVINO</li>
-			  </ul>
-			  <p class="mb-1"><strong>Tech:</strong> Python, OpenCV, PyTorch, YOLOv8</p>
-			  <p><strong>Deployments:</strong> ONNX, OpenVINO, MNN, NCNN</p>
-			  <button class="btn btn-outline-light btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#valqariModal">
-				<i class="fas fa-eye me-1"></i> View Project
-			  </button>
+	</section>
+	<!-- Contact Section -->
+	<section id="contact-section" class="py-5">
+		<div class="container">
+			<div class="text-center mb-5">
+				<h2 class="fw-bold display-5">Contact Me</h2>
+				<p class="text-muted">Let’s connect for collaboration, ideas, or just to say hi!</p>
 			</div>
-		  </div>
-		</div>
-  
-		<div class="col-md-6">
-		  <div class="card bg-dark text-white h-100 shadow border-0">
-			<div class="card-body">
-			  <span class="badge bg-secondary mb-2">Aug 2024 – Dec 2024</span>
-			  <h5 class="card-title">Graduate / Teaching Assistant</h5>
-			  <h6 class="text-muted">Governors State University</h6>
-			  <ul class="mt-3 small">
-				<li>Built Streamlit app for faculty workload analysis</li>
-				<li>Integrated Excel analytics into dashboards</li>
-				<li>Automated reporting pipeline</li>
-			  </ul>
+
+			<div class="row g-4 text-center">
+				<div class="col-md-3">
+					<div class="bg-dark text-white p-4 rounded shadow">
+						<i class="fas fa-map-marker-alt fa-2x mb-2"></i>
+						<h5>Location</h5>
+						<p>Chicago, IL, USA</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="bg-dark text-white p-4 rounded shadow">
+						<i class="fas fa-phone fa-2x mb-2"></i>
+						<h5>Phone</h5>
+						<p><a href="tel:+14482205962" class="text-white">+1 448-220-5962</a></p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="bg-dark text-white p-4 rounded shadow">
+						<i class="fas fa-envelope fa-2x mb-2"></i>
+						<h5>Email</h5>
+						<p><a href="mailto:av.jaswanth@gmail.com" class="text-white">av.jaswanth@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="bg-dark text-white p-4 rounded shadow">
+						<i class="fas fa-file-pdf fa-2x mb-2"></i>
+						<h5>Resume</h5>
+						<p><a href="#" class="text-white">Download PDF</a></p>
+					</div>
+				</div>
 			</div>
-		  </div>
-		</div>
-  
-		<div class="col-md-6">
-		  <div class="card bg-dark text-white h-100 shadow border-0">
-			<div class="card-body">
-			  <span class="badge bg-secondary mb-2">Jan 2021 – Jul 2023</span>
-			  <h5 class="card-title">Senior Analyst</h5>
-			  <h6 class="text-muted">Capgemini – GE Power and Energy</h6>
-			  <ul class="mt-3 small">
-				<li>Built Angular + Spring Boot microservices</li>
-				<li>Integrated REST APIs with MySQL backend</li>
-				<li>Boosted DB response time by 30%</li>
-			  </ul>
+
+			<!-- Social Links -->
+			<div class="text-center mt-5">
+				<ul class="list-inline">
+					<li class="list-inline-item mx-2"><a href="https://linkedin.com/in/jaswanth-akkamreddy/"
+							class="text-white"><i class="fab fa-linkedin fa-lg"></i></a></li>
+					<li class="list-inline-item mx-2"><a href="https://github.com/jaswanthreddya" class="text-white"><i
+								class="fab fa-github fa-lg"></i></a></li>
+					<li class="list-inline-item mx-2"><a href="https://www.instagram.com/jaswanth__jashh/"
+							class="text-white"><i class="fab fa-instagram fa-lg"></i></a></li>
+				</ul>
 			</div>
-		  </div>
 		</div>
-	  </div>
-  
-	  <!-- Education -->
-	  <h4 class="fw-bold mt-5 mb-4 text-uppercase">Education</h4>
-	  <div class="row g-4">
-		<div class="col-md-6">
-		  <div class="card bg-dark text-white shadow border-0 h-100">
-			<div class="card-body">
-			  <span class="badge bg-primary mb-2">2023 – 2025</span>
-			  <h5 class="card-title">MS in Computer Science</h5>
-			  <p class="text-muted mb-0">Governors State University, IL, USA</p>
-			</div>
-		  </div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="py-4 bg-black text-white text-center">
+		<div class="container">
+			<p class="mb-0">
+				&copy;
+				<script>document.write(new Date().getFullYear());</script> Jaswanth Reddy. Built with 💻
+			</p>
 		</div>
-  
-		<div class="col-md-6">
-		  <div class="card bg-dark text-white shadow border-0 h-100">
-			<div class="card-body">
-			  <span class="badge bg-primary mb-2">2017 – 2021</span>
-			  <h5 class="card-title">BE in Computer Science</h5>
-			  <p class="text-muted mb-0">Lovely Professional University, India</p>
-			</div>
-		  </div>
-		</div>
-	  </div>
-  
-	  <!-- CV Button -->
-	  <div class="text-center mt-5">
-		<a href="#" class="btn btn-primary btn-lg">
-		  <i class="fas fa-download me-2"></i> Download CV
-		</a>
-	  </div>
-	</div>
-  </section>
-<!-- Contact Section -->
-<section id="contact-section" class="py-5">
-	<div class="container">
-	  <div class="text-center mb-5">
-		<h2 class="fw-bold display-5">Contact Me</h2>
-		<p class="text-muted">Let’s connect for collaboration, ideas, or just to say hi!</p>
-	  </div>
-  
-	  <div class="row g-4 text-center">
-		<div class="col-md-3">
-		  <div class="bg-dark text-white p-4 rounded shadow">
-			<i class="fas fa-map-marker-alt fa-2x mb-2"></i>
-			<h5>Location</h5>
-			<p>Chicago, IL, USA</p>
-		  </div>
-		</div>
-		<div class="col-md-3">
-		  <div class="bg-dark text-white p-4 rounded shadow">
-			<i class="fas fa-phone fa-2x mb-2"></i>
-			<h5>Phone</h5>
-			<p><a href="tel:+14482205962" class="text-white">+1 448-220-5962</a></p>
-		  </div>
-		</div>
-		<div class="col-md-3">
-		  <div class="bg-dark text-white p-4 rounded shadow">
-			<i class="fas fa-envelope fa-2x mb-2"></i>
-			<h5>Email</h5>
-			<p><a href="mailto:av.jaswanth@gmail.com" class="text-white">av.jaswanth@gmail.com</a></p>
-		  </div>
-		</div>
-		<div class="col-md-3">
-		  <div class="bg-dark text-white p-4 rounded shadow">
-			<i class="fas fa-file-pdf fa-2x mb-2"></i>
-			<h5>Resume</h5>
-			<p><a href="#" class="text-white">Download PDF</a></p>
-		  </div>
-		</div>
-	  </div>
-  
-	  <!-- Social Links -->
-	  <div class="text-center mt-5">
-		<ul class="list-inline">
-		  <li class="list-inline-item mx-2"><a href="https://linkedin.com/in/jaswanth-akkamreddy/" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a></li>
-		  <li class="list-inline-item mx-2"><a href="https://github.com/jaswanthreddya" class="text-white"><i class="fab fa-github fa-lg"></i></a></li>
-		  <li class="list-inline-item mx-2"><a href="https://www.instagram.com/jaswanth__jashh/" class="text-white"><i class="fab fa-instagram fa-lg"></i></a></li>
-		</ul>
-	  </div>
-	</div>
-  </section>
-  
-  <!-- Footer -->
-  <footer class="py-4 bg-black text-white text-center">
-	<div class="container">
-	  <p class="mb-0">
-		&copy; <script>document.write(new Date().getFullYear());</script> Jaswanth Reddy. Built with 💻
-	  </p>
-	</div>
-  </footer>
-  
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-	function toggleTheme() {
-	  const body = document.body;
-	  const icon = document.getElementById('themeIcon');
-	  body.classList.toggle('light-mode');
-	  if (body.classList.contains('light-mode')) {
-		icon.classList.remove('fa-moon');
-		icon.classList.add('fa-sun');
-	  } else {
-		icon.classList.remove('fa-sun');
-		icon.classList.add('fa-moon');
-	  }
-	}
-  </script>
-  </body>
-  </html>
-		
+	</footer>
+
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		function toggleTheme() {
+			const body = document.body;
+			const icon = document.getElementById('themeIcon');
+			body.classList.toggle('light-mode');
+			if (body.classList.contains('light-mode')) {
+				icon.classList.remove('fa-moon');
+				icon.classList.add('fa-sun');
+			} else {
+				icon.classList.remove('fa-sun');
+				icon.classList.add('fa-moon');
+			}
+		}
+	</script>
+</body>
+
+</html>
