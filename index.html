@@ -256,6 +256,26 @@
 		.resume-wrap:hover {
 			transform: perspective(1000px) rotateX(3deg) scale(1.015);
 		}
+
+		.cert-img {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.cert-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.certificate-card {
+  transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+}
+
 	</style>
 
 </head>
@@ -363,6 +383,37 @@
 	  </div>
 	</div>
   </div>
+
+  <!-- Modal Template for Certificates -->
+<div class="modal fade" id="certModal1" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+	  <div class="modal-content bg-dark">
+		<img src="images/cert1.png" class="img-fluid rounded">
+	  </div>
+	</div>
+  </div>
+  <div class="modal fade" id="certModal2" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+	  <div class="modal-content bg-dark">
+		<img src="images/cert2.png" class="img-fluid rounded">
+	  </div>
+	</div>
+  </div>
+  <div class="modal fade" id="certModal3" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+	  <div class="modal-content bg-dark">
+		<img src="images/cert3.png" class="img-fluid rounded">
+	  </div>
+	</div>
+  </div>
+  <div class="modal fade" id="certModal4" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+	  <div class="modal-content bg-dark">
+		<img src="images/cert4.png" class="img-fluid rounded">
+	  </div>
+	</div>
+  </div>
+  
   
 
 	<nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="navbar">
@@ -391,7 +442,7 @@
 			<p id="typing-animation" class="lead"></p>
 			<h2 class="mt-2">A Senior Analyst</h2>
 			<div class="mt-4">
-				<a href="https://github.com/jaswanthreddya?tab=repositories" class="btn btn-outline-light me-3">
+				<a href="https://github.com/VenkataJaswant?tab=repositories" class="btn btn-outline-light me-3">
 					<i class="fab fa-github me-2"></i> My Works
 				</a>
 				<a href="#contact-section" class="btn btn-primary">
@@ -416,9 +467,9 @@
 
 	<!-- Floating Social Icons -->
 	<div class="position-fixed top-50 start-0 translate-middle-y d-flex flex-column z-3 ms-2">
-		<a href="https://linkedin.com/in/jaswanth-akkamreddy/" class="text-white mb-3"><i
+		<a href="https://www.linkedin.com/in/jaswanth-akkamreddy-83a71a144/" class="text-white mb-3"><i
 				class="fab fa-linkedin fa-lg"></i></a>
-		<a href="https://github.com/jaswanthreddya" class="text-white mb-3"><i class="fab fa-github fa-lg"></i></a>
+		<a href="https://github.com/VenkataJaswant?tab=repositories" class="text-white mb-3"><i class="fab fa-github fa-lg"></i></a>
 		<a href="mailto:av.jaswanth@gmail.com" class="text-white"><i class="fas fa-envelope fa-lg"></i></a>
 	</div>
 
@@ -482,7 +533,7 @@
 								<div class="card-body">
 									<h5 class="card-title fw-bold">Jaswanth Reddy Akkamreddygari</h5>
 									<p class="mb-1"><strong>Role:</strong> AI/ML Engineer, Intern</p>
-									<p class="mb-1"><strong>Experience:</strong> 4 Years 3 Months</p>
+									<p class="mb-1"><strong>Experience:</strong> 5+ Years</p>
 									<p class="mb-1"><strong>Location:</strong> Chicago, Illinois, USA</p>
 									<p class="mb-1"><strong>Languages:</strong> English, Hindi, Telugu</p>
 								</div>
@@ -504,7 +555,7 @@
 						<div class="mb-2">
 							<label class="form-label">Python</label>
 							<div class="progress">
-								<div class="progress-bar bg-info" style="width: 85%">85%</div>
+								<div class="progress-bar bg-info" style="width: 85%">95%</div>
 							</div>
 						</div>
 						<div class="mb-2">
@@ -516,19 +567,19 @@
 						<div class="mb-2">
 							<label class="form-label">Angular</label>
 							<div class="progress">
-								<div class="progress-bar bg-danger" style="width: 85%">85%</div>
+								<div class="progress-bar bg-danger" style="width: 85%">95%</div>
 							</div>
 						</div>
 						<div class="mb-2">
-							<label class="form-label">Machine Learning</label>
+							<label class="form-label">Machine Learning And training Object Detection Models</label>
 							<div class="progress">
-								<div class="progress-bar bg-primary" style="width: 80%">80%</div>
+								<div class="progress-bar bg-primary" style="width: 80%">95%</div>
 							</div>
 						</div>
 						<div class="mb-2">
 							<label class="form-label">Java</label>
 							<div class="progress">
-								<div class="progress-bar bg-secondary" style="width: 80%">80%</div>
+								<div class="progress-bar bg-secondary" style="width: 80%">90%</div>
 							</div>
 						</div>
 					</div>
@@ -541,7 +592,7 @@
 		<div class="container">
 			<div class="text-center mb-5">
 				<h2 class="fw-bold display-5">Resume</h2>
-				<p class="text-muted">4+ years in full-stack development, AI/ML systems, and scalable web applications
+				<p class="text-muted">5+ years in full-stack development, AI/ML systems, and scalable web applications
 				</p>
 			</div>
 
@@ -649,6 +700,64 @@
 				</div>
 			</div>
 
+			<!-- Certifications Section -->
+			<section id="certifications" class="py-5">
+				<div class="container">
+				  <div class="text-center mb-5">
+					<h2 class="fw-bold display-5">Certifications</h2>
+					<p class="text-muted">Here are a few certifications I've earned across development, analytics, and AI domains.</p>
+				  </div>
+				  <div class="row g-4">
+					<!-- Certificate 1 -->
+					<div class="col-md-6 col-lg-3">
+					  <div class="card border-0 shadow-sm certificate-card">
+						<img src="images/cert1.png" class="card-img-top cert-img" alt="Certificate 1" data-bs-toggle="modal" data-bs-target="#certModal1">
+						<div class="card-body text-center">
+						  <h6 class="fw-semibold mb-1">PEGA CSA</h6>
+						  <p class="text-muted small mb-0">Certified System Architect – PEGA</p>
+						</div>
+					  </div>
+					</div>
+					<!-- Certificate 2 -->
+					<div class="col-md-6 col-lg-3">
+					  <div class="card border-0 shadow-sm certificate-card">
+						<img src="images/cert2.png" class="card-img-top cert-img" alt="Certificate 2" data-bs-toggle="modal" data-bs-target="#certModal2">
+						<div class="card-body text-center">
+						  <h6 class="fw-semibold mb-1">PEGA CSSA</h6>
+						  <p class="text-muted small mb-0">Certified Senior System Architect – PEGA</p>
+						</div>
+					  </div>
+					</div>
+					<!-- Certificate 3 -->
+					<div class="col-md-6 col-lg-3">
+					  <div class="card border-0 shadow-sm certificate-card">
+						<img src="images/cert3.png" class="card-img-top cert-img" alt="Certificate 3" data-bs-toggle="modal" data-bs-target="#certModal3">
+						<div class="card-body text-center">
+						  <h6 class="fw-semibold mb-1">SAP Hana</h6>
+						  <p class="text-muted small mb-2">SAP Certified Application Associate</p>
+						  <a href="https://www.credly.com/badges/60f702f6-9545-4220-bbd4-7e6253a7b639/public_url" target="_blank" class="btn btn-sm btn-outline-primary">
+							<i class="fas fa-external-link-alt me-1"></i> Click here to view badge
+						  </a>
+						</div>
+					  </div>
+					</div>
+					<!-- Certificate 4 -->
+					<div class="col-md-6 col-lg-3">
+					  <div class="card border-0 shadow-sm certificate-card">
+						<img src="images/cert4.png" class="card-img-top cert-img" alt="Certificate 4" data-bs-toggle="modal" data-bs-target="#certModal4">
+						<div class="card-body text-center">
+						</br>
+						  <h6 class="fw-semibold mb-1">AWS </h6>
+						  <p class="text-muted small mb-0"> AWS - Cloud Practitioner(IN PROGRESS)</p>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </section>
+			  
+  
+
 			<!-- CV Button -->
 			<div class="text-center mt-5">
 				<a href="#" class="btn btn-primary btn-lg">
@@ -699,9 +808,9 @@
 			<!-- Social Links -->
 			<div class="text-center mt-5">
 				<ul class="list-inline">
-					<li class="list-inline-item mx-2"><a href="https://linkedin.com/in/jaswanth-akkamreddy/"
+					<li class="list-inline-item mx-2"><a href="https://www.linkedin.com/in/jaswanth-akkamreddy-83a71a144/"
 							class="text-white"><i class="fab fa-linkedin fa-lg"></i></a></li>
-					<li class="list-inline-item mx-2"><a href="https://github.com/jaswanthreddya" class="text-white"><i
+					<li class="list-inline-item mx-2"><a href="https://github.com/VenkataJaswant" class="text-white"><i
 								class="fab fa-github fa-lg"></i></a></li>
 					<li class="list-inline-item mx-2"><a href="https://www.instagram.com/jaswanth__jashh/"
 							class="text-white"><i class="fab fa-instagram fa-lg"></i></a></li>
