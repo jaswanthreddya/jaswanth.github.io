@@ -258,30 +258,29 @@
 		}
 
 		.cert-img {
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 8px;
-}
+			cursor: pointer;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			border-radius: 8px;
+		}
 
-.cert-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-}
+		.cert-img:hover {
+			transform: scale(1.05);
+			box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+		}
 
-.certificate-card {
-  transition: transform 0.3s ease;
-}
+		.certificate-card {
+			transition: transform 0.3s ease;
+		}
 
-.certificate-card:hover {
-  transform: translateY(-8px);
-}
-
+		.certificate-card:hover {
+			transform: translateY(-8px);
+		}
 	</style>
 
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
-	
+
 	<!-- Modal for Valqari Project -->
 	<div class="modal fade" id="valqariModal" tabindex="-1" aria-labelledby="valqariModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-xl modal-dialog-centered">
@@ -344,85 +343,105 @@
 	</div>
 
 	<!-- Modal: MinuteClinic Project -->
-<div class="modal fade" id="minuteClinicModal" tabindex="-1" aria-labelledby="minuteClinicModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-xl modal-dialog-centered">
-	  <div class="modal-content bg-dark text-white">
-		<div class="modal-header border-0">
-		  <h5 class="modal-title" id="minuteClinicModalLabel">MinuteClinic – .NET Web App</h5>
-		  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		<div class="modal-body">
-		  <p><strong>Overview:</strong> Built using ASP.NET Core MVC and SQL Server, this web app enables real-time management of clinic data, vaccine inventory, and patient scheduling.</p>
-  
-		  <div class="row g-4">
-			<!-- Screenshot or Video -->
-			<div class="col-md-6">
-			  <div class="ratio ratio-16x9">
-				<video class="rounded" controls poster="images/minuteclinic-poster.jpg">
-				  <source src="images/minuteClinic.mp4" type="video/mp4">
-				  Your browser does not support the video tag.
-				</video>
-			  </div>
-			  <p class="mt-3 small">Live demo showcasing admin login, vaccine list management, and patient appointment flow.</p>
-			</div>
-  
-			<!-- Description -->
-			<div class="col-md-6">
-			  <ul class="list-unstyled small">
-				<li><i class="fas fa-check-circle text-success me-2"></i> Role-based login for Admin & Patients</li>
-				<li><i class="fas fa-check-circle text-success me-2"></i> Full CRUD operations using EF Core</li>
-				<li><i class="fas fa-check-circle text-success me-2"></i> Bootstrap 5 for modern UI/UX</li>
-				<li><i class="fas fa-check-circle text-success me-2"></i> Vaccine scheduling with validation</li>
-			  </ul>
-			  <p class="mt-3"><strong>Tech Stack:</strong> ASP.NET Core MVC, Entity Framework, SQL Server, Bootstrap 5, C#</p>
-			</div>
-		  </div>
-		</div>
-		<div class="modal-footer border-0">
-		  <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
-		</div>
-	  </div>
-	</div>
-  </div>
+	<div class="modal fade" id="minuteClinicModal" tabindex="-1" aria-labelledby="minuteClinicModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-xl modal-dialog-centered">
+			<div class="modal-content bg-dark text-white">
+				<div class="modal-header border-0">
+					<h5 class="modal-title" id="minuteClinicModalLabel">MinuteClinic – .NET Web App</h5>
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p><strong>Overview:</strong> Built using ASP.NET Core MVC and SQL Server, this web app enables
+						real-time management of clinic data, vaccine inventory, and patient scheduling.</p>
 
-  <!-- Modal Template for Certificates -->
-<div class="modal fade" id="certModal1" tabindex="-1" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-lg">
-	  <div class="modal-content bg-dark">
-		<img src="images/cert1.png" class="img-fluid rounded">
-	  </div>
+					<div class="row g-4">
+						<!-- Screenshot or Video -->
+						<div class="col-md-6">
+							<div class="ratio ratio-16x9">
+								<video class="rounded" controls poster="images/minuteclinic-poster.jpg">
+									<source src="images/minuteClinic.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+							</div>
+							<p class="mt-3 small">Live demo showcasing admin login, vaccine list management, and patient
+								appointment flow.</p>
+						</div>
+
+						<!-- Description -->
+						<div class="col-md-6">
+							<ul class="list-unstyled small">
+								<li><i class="fas fa-check-circle text-success me-2"></i> Role-based login for Admin &
+									Patients</li>
+								<li><i class="fas fa-check-circle text-success me-2"></i> Full CRUD operations using EF
+									Core</li>
+								<li><i class="fas fa-check-circle text-success me-2"></i> Bootstrap 5 for modern UI/UX
+								</li>
+								<li><i class="fas fa-check-circle text-success me-2"></i> Vaccine scheduling with
+									validation</li>
+							</ul>
+							<p class="mt-3"><strong>Tech Stack:</strong> ASP.NET Core MVC, Entity Framework, SQL Server,
+								Bootstrap 5, C#</p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer border-0">
+					<button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
 	</div>
-  </div>
-  <div class="modal fade" id="certModal2" tabindex="-1" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-lg">
-	  <div class="modal-content bg-dark">
-		<img src="images/cert2.png" class="img-fluid rounded">
-	  </div>
+
+	<!-- Modal Template for Certificates -->
+	<div class="modal fade" id="certModal1" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content bg-dark">
+				<img src="images/cert1.png" class="img-fluid rounded">
+			</div>
+		</div>
 	</div>
-  </div>
-  <div class="modal fade" id="certModal3" tabindex="-1" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-lg">
-	  <div class="modal-content bg-dark">
-		<img src="images/cert3.png" class="img-fluid rounded">
-	  </div>
+	<div class="modal fade" id="certModal2" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content bg-dark">
+				<img src="images/cert2.png" class="img-fluid rounded">
+			</div>
+		</div>
 	</div>
-  </div>
-  <div class="modal fade" id="certModal4" tabindex="-1" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-lg">
-	  <div class="modal-content bg-dark">
-		<img src="images/cert4.png" class="img-fluid rounded">
-	  </div>
+	<div class="modal fade" id="certModal3" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content bg-dark">
+				<img src="images/cert3.png" class="img-fluid rounded">
+			</div>
+		</div>
 	</div>
-  </div>
-  
-  
+	<div class="modal fade" id="certModal4" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
+			<div class="modal-content bg-dark">
+				<img src="images/cert4.png" class="img-fluid rounded">
+			</div>
+		</div>
+	</div>
+
 
 	<nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="navbar">
 		<div class="container">
 			<a class="navbar-brand fw-bold" href="#">Jaswanth Reddy</a>
+	
+			<!-- ✅ Insert this in the middle -->
+			<div class="mx-auto d-flex align-items-center gap-3 bg-dark text-white px-3 py-1 rounded-pill shadow-sm small">
+				<img src="https://counter.dev/track.svg?id=d2df84a4-3f57-4bd1-9839-2ce26e1d022a&style=dark"
+					alt="Visitor Count" style="height: 18px;" />
+				<div id="like-container" class="d-flex align-items-center gap-1">
+					<span id="like-icon" style="cursor: pointer;">❤️</span>
+					<span id="like-count">0</span>
+				</div>
+			</div>
+	
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
 				<span class="navbar-toggler-icon"></span>
 			</button>
+	
 			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 				<ul class="navbar-nav mb-2 mb-lg-0">
 					<li class="nav-item"><a class="nav-link" href="#home-section">Home</a></li>
@@ -436,20 +455,9 @@
 			</div>
 		</div>
 	</nav>
+	
 
-	<!-- Visitor & Like Panel -->
-<div class="position-fixed top-0 end-0 mt-2 me-3 z-3 d-flex align-items-center gap-3 bg-dark text-white px-3 py-2 rounded-pill shadow-sm small"
-style="opacity: 0.95;">
 
-<!-- Visitor Count -->
-<img src="https://counter.dev/track.svg?id=d2df84a4-3f57-4bd1-9839-2ce26e1d022a&style=dark" alt="Visitor Count" style="height: 20px;" />
-
-<!-- Like Button -->
-<div id="like-container" class="d-flex align-items-center gap-2">
-<span id="like-icon" style="cursor: pointer;">❤️</span>
-<span id="like-count">0</span>
-</div>
-</div>
 
 	<!-- Hero Section -->
 	<section id="home-section" class="hero d-flex align-items-center vh-100 position-relative">
@@ -485,7 +493,8 @@ style="opacity: 0.95;">
 	<div class="position-fixed top-50 start-0 translate-middle-y d-flex flex-column z-3 ms-2">
 		<a href="https://www.linkedin.com/in/jaswanth-akkamreddy-83a71a144/" class="text-white mb-3"><i
 				class="fab fa-linkedin fa-lg"></i></a>
-		<a href="https://github.com/VenkataJaswant?tab=repositories" class="text-white mb-3"><i class="fab fa-github fa-lg"></i></a>
+		<a href="https://github.com/VenkataJaswant?tab=repositories" class="text-white mb-3"><i
+				class="fab fa-github fa-lg"></i></a>
 		<a href="mailto:av.jaswanth@gmail.com" class="text-white"><i class="fas fa-envelope fa-lg"></i></a>
 	</div>
 
@@ -719,60 +728,66 @@ style="opacity: 0.95;">
 			<!-- Certifications Section -->
 			<section id="certifications" class="py-5">
 				<div class="container">
-				  <div class="text-center mb-5">
-					<h2 class="fw-bold display-5">Certifications</h2>
-					<p class="text-muted">Here are a few certifications I've earned across development, analytics, and AI domains.</p>
-				  </div>
-				  <div class="row g-4">
-					<!-- Certificate 1 -->
-					<div class="col-md-6 col-lg-3">
-					  <div class="card border-0 shadow-sm certificate-card">
-						<img src="images/cert1.png" class="card-img-top cert-img" alt="Certificate 1" data-bs-toggle="modal" data-bs-target="#certModal1">
-						<div class="card-body text-center">
-						  <h6 class="fw-semibold mb-1">PEGA CSA</h6>
-						  <p class="text-muted small mb-0">Certified System Architect – PEGA</p>
-						</div>
-					  </div>
+					<div class="text-center mb-5">
+						<h2 class="fw-bold display-5">Certifications</h2>
+						<p class="text-muted">Here are a few certifications I've earned across development, analytics,
+							and AI domains.</p>
 					</div>
-					<!-- Certificate 2 -->
-					<div class="col-md-6 col-lg-3">
-					  <div class="card border-0 shadow-sm certificate-card">
-						<img src="images/cert2.png" class="card-img-top cert-img" alt="Certificate 2" data-bs-toggle="modal" data-bs-target="#certModal2">
-						<div class="card-body text-center">
-						  <h6 class="fw-semibold mb-1">PEGA CSSA</h6>
-						  <p class="text-muted small mb-0">Certified Senior System Architect – PEGA</p>
+					<div class="row g-4">
+						<!-- Certificate 1 -->
+						<div class="col-md-6 col-lg-3">
+							<div class="card border-0 shadow-sm certificate-card">
+								<img src="images/cert1.png" class="card-img-top cert-img" alt="Certificate 1"
+									data-bs-toggle="modal" data-bs-target="#certModal1">
+								<div class="card-body text-center">
+									<h6 class="fw-semibold mb-1">PEGA CSA</h6>
+									<p class="text-muted small mb-0">Certified System Architect – PEGA</p>
+								</div>
+							</div>
 						</div>
-					  </div>
-					</div>
-					<!-- Certificate 3 -->
-					<div class="col-md-6 col-lg-3">
-					  <div class="card border-0 shadow-sm certificate-card">
-						<img src="images/cert3.png" class="card-img-top cert-img" alt="Certificate 3" data-bs-toggle="modal" data-bs-target="#certModal3">
-						<div class="card-body text-center">
-						  <h6 class="fw-semibold mb-1">SAP Hana</h6>
-						  <p class="text-muted small mb-2">SAP Certified Application Associate</p>
-						  <a href="https://www.credly.com/badges/60f702f6-9545-4220-bbd4-7e6253a7b639/public_url" target="_blank" class="btn btn-sm btn-outline-primary">
-							<i class="fas fa-external-link-alt me-1"></i> Click here to view badge
-						  </a>
+						<!-- Certificate 2 -->
+						<div class="col-md-6 col-lg-3">
+							<div class="card border-0 shadow-sm certificate-card">
+								<img src="images/cert2.png" class="card-img-top cert-img" alt="Certificate 2"
+									data-bs-toggle="modal" data-bs-target="#certModal2">
+								<div class="card-body text-center">
+									<h6 class="fw-semibold mb-1">PEGA CSSA</h6>
+									<p class="text-muted small mb-0">Certified Senior System Architect – PEGA</p>
+								</div>
+							</div>
 						</div>
-					  </div>
-					</div>
-					<!-- Certificate 4 -->
-					<div class="col-md-6 col-lg-3">
-					  <div class="card border-0 shadow-sm certificate-card">
-						<img src="images/cert4.png" class="card-img-top cert-img" alt="Certificate 4" data-bs-toggle="modal" data-bs-target="#certModal4">
-						<div class="card-body text-center">
-						</br>
-						  <h6 class="fw-semibold mb-1">AWS </h6>
-						  <p class="text-muted small mb-0"> AWS - Cloud Practitioner(IN PROGRESS)</p>
+						<!-- Certificate 3 -->
+						<div class="col-md-6 col-lg-3">
+							<div class="card border-0 shadow-sm certificate-card">
+								<img src="images/cert3.png" class="card-img-top cert-img" alt="Certificate 3"
+									data-bs-toggle="modal" data-bs-target="#certModal3">
+								<div class="card-body text-center">
+									<h6 class="fw-semibold mb-1">SAP Hana</h6>
+									<p class="text-muted small mb-2">SAP Certified Application Associate</p>
+									<a href="https://www.credly.com/badges/60f702f6-9545-4220-bbd4-7e6253a7b639/public_url"
+										target="_blank" class="btn btn-sm btn-outline-primary">
+										<i class="fas fa-external-link-alt me-1"></i> Click here to view badge
+									</a>
+								</div>
+							</div>
 						</div>
-					  </div>
+						<!-- Certificate 4 -->
+						<div class="col-md-6 col-lg-3">
+							<div class="card border-0 shadow-sm certificate-card">
+								<img src="images/cert4.png" class="card-img-top cert-img" alt="Certificate 4"
+									data-bs-toggle="modal" data-bs-target="#certModal4">
+								<div class="card-body text-center">
+									</br>
+									<h6 class="fw-semibold mb-1">AWS </h6>
+									<p class="text-muted small mb-0"> AWS - Cloud Practitioner(IN PROGRESS)</p>
+								</div>
+							</div>
+						</div>
 					</div>
-				  </div>
 				</div>
-			  </section>
-			  
-  
+			</section>
+
+
 
 			<!-- CV Button -->
 			<div class="text-center mt-5">
@@ -824,8 +839,9 @@ style="opacity: 0.95;">
 			<!-- Social Links -->
 			<div class="text-center mt-5">
 				<ul class="list-inline">
-					<li class="list-inline-item mx-2"><a href="https://www.linkedin.com/in/jaswanth-akkamreddy-83a71a144/"
-							class="text-white"><i class="fab fa-linkedin fa-lg"></i></a></li>
+					<li class="list-inline-item mx-2"><a
+							href="https://www.linkedin.com/in/jaswanth-akkamreddy-83a71a144/" class="text-white"><i
+								class="fab fa-linkedin fa-lg"></i></a></li>
 					<li class="list-inline-item mx-2"><a href="https://github.com/VenkataJaswant" class="text-white"><i
 								class="fab fa-github fa-lg"></i></a></li>
 					<li class="list-inline-item mx-2"><a href="https://www.instagram.com/jaswanth__jashh/"
@@ -861,41 +877,41 @@ style="opacity: 0.95;">
 			}
 		}
 	</script>
-  <script src="//code.tidio.co/p5c1okvnbwhw5772n049bnspwtrcwccs.js" async></script>
+	<script src="//code.tidio.co/p5c1okvnbwhw5772n049bnspwtrcwccs.js" async></script>
 
-  <script>
-	// Like Button with LocalStorage
-	const likeIcon = document.getElementById("like-icon");
-	const likeCount = document.getElementById("like-count");
-  
-	const localKey = "jaswanth-portfolio-liked";
-	const globalKey = "jaswanth-global-like-count";
-  
-	// Dummy: simulate a stored like count
-	let globalLikes = localStorage.getItem(globalKey);
-	if (!globalLikes) {
-	  globalLikes = Math.floor(Math.random() * 50 + 10); // e.g., starting at 10-60
-	  localStorage.setItem(globalKey, globalLikes);
-	}
-  
-	likeCount.innerText = globalLikes;
-  
-	// If already liked, gray out
-	if (localStorage.getItem(localKey)) {
-	  likeIcon.style.color = "gray";
-	}
-  
-	likeIcon.addEventListener("click", () => {
-	  if (!localStorage.getItem(localKey)) {
-		globalLikes++;
+	<script>
+		// Like Button with LocalStorage
+		const likeIcon = document.getElementById("like-icon");
+		const likeCount = document.getElementById("like-count");
+
+		const localKey = "jaswanth-portfolio-liked";
+		const globalKey = "jaswanth-global-like-count";
+
+		// Dummy: simulate a stored like count
+		let globalLikes = localStorage.getItem(globalKey);
+		if (!globalLikes) {
+			globalLikes = Math.floor(Math.random() * 50 + 10); // e.g., starting at 10-60
+			localStorage.setItem(globalKey, globalLikes);
+		}
+
 		likeCount.innerText = globalLikes;
-		likeIcon.style.color = "gray";
-		localStorage.setItem(localKey, "true");
-		localStorage.setItem(globalKey, globalLikes);
-	  }
-	});
-  </script>
-  
+
+		// If already liked, gray out
+		if (localStorage.getItem(localKey)) {
+			likeIcon.style.color = "gray";
+		}
+
+		likeIcon.addEventListener("click", () => {
+			if (!localStorage.getItem(localKey)) {
+				globalLikes++;
+				likeCount.innerText = globalLikes;
+				likeIcon.style.color = "gray";
+				localStorage.setItem(localKey, "true");
+				localStorage.setItem(globalKey, globalLikes);
+			}
+		});
+	</script>
+
 
 </body>
 
