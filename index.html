@@ -281,6 +281,7 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
+	
 	<!-- Modal for Valqari Project -->
 	<div class="modal fade" id="valqariModal" tabindex="-1" aria-labelledby="valqariModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-xl modal-dialog-centered">
@@ -435,6 +436,21 @@
 			</div>
 		</div>
 	</nav>
+
+	<!-- Visitor & Like Panel -->
+<div class="position-fixed top-0 end-0 mt-2 me-3 z-3 d-flex align-items-center gap-3 bg-dark text-white px-3 py-2 rounded-pill shadow-sm small"
+style="opacity: 0.95;">
+
+<!-- Visitor Count -->
+<img src="https://counter.dev/track.svg?id=d2df84a4-3f57-4bd1-9839-2ce26e1d022a&style=dark" alt="Visitor Count" style="height: 20px;" />
+
+<!-- Like Button -->
+<div id="like-container" class="d-flex align-items-center gap-2">
+<span id="like-icon" style="cursor: pointer;">❤️</span>
+<span id="like-count">0</span>
+</div>
+</div>
+
 	<!-- Hero Section -->
 	<section id="home-section" class="hero d-flex align-items-center vh-100 position-relative">
 		<div class="container text-center z-2">
@@ -846,6 +862,40 @@
 		}
 	</script>
   <script src="//code.tidio.co/p5c1okvnbwhw5772n049bnspwtrcwccs.js" async></script>
+
+  <script>
+	// Like Button with LocalStorage
+	const likeIcon = document.getElementById("like-icon");
+	const likeCount = document.getElementById("like-count");
+  
+	const localKey = "jaswanth-portfolio-liked";
+	const globalKey = "jaswanth-global-like-count";
+  
+	// Dummy: simulate a stored like count
+	let globalLikes = localStorage.getItem(globalKey);
+	if (!globalLikes) {
+	  globalLikes = Math.floor(Math.random() * 50 + 10); // e.g., starting at 10-60
+	  localStorage.setItem(globalKey, globalLikes);
+	}
+  
+	likeCount.innerText = globalLikes;
+  
+	// If already liked, gray out
+	if (localStorage.getItem(localKey)) {
+	  likeIcon.style.color = "gray";
+	}
+  
+	likeIcon.addEventListener("click", () => {
+	  if (!localStorage.getItem(localKey)) {
+		globalLikes++;
+		likeCount.innerText = globalLikes;
+		likeIcon.style.color = "gray";
+		localStorage.setItem(localKey, "true");
+		localStorage.setItem(globalKey, globalLikes);
+	  }
+	});
+  </script>
+  
 
 </body>
 
