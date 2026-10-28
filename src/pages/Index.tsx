@@ -8,15 +8,18 @@ import { ContactSection } from '@/components/sections/ContactSection';
 import { AIControlPanel } from '@/components/AIControlPanel';
 import { Footer } from '@/components/Footer';
 import { ProjectsSection } from '@/components/sections/ProjectsSection';
+import { SkillsShowcase, AIFeatureSpotlight, SkipLink } from '@/components/sections/SkillsShowcase';
 
 const Index = () => {
   return (
     <MoodProvider>
       <div className="min-h-screen bg-background transition-colors duration-500">
+        <SkipLink />
         <Navigation />
         <main>
           <HeroSection />
           <AboutSection />
+          <SkillsShowcase />
           <ResumeSection />
           <ProjectsSection />
           <CertificationsSection />
@@ -24,6 +27,7 @@ const Index = () => {
         </main>
         <Footer />
         <AIControlPanel />
+        <AIFeatureSpotlight />
       </div>
     </MoodProvider>
   );

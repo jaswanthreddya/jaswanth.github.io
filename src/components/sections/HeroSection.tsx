@@ -4,10 +4,10 @@ import { useMood } from '@/contexts/MoodContext';
 import { useEffect, useState } from 'react';
 
 const roles = [
-  'Full Stack Developer',
+  'Full Stack .NET & C# Developer',
+  'Front-End & UI Engineer',
+  'Accessibility (WCAG 2.1 AA) Advocate',
   'AI/ML Enthusiast',
-  'Cloud Solutions Architect',
-  'Problem Solver',
 ];
 
 export function HeroSection() {
