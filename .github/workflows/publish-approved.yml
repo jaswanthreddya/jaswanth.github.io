@@ -8,17 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download approved portfolio
-        env:
-          SITE: https://gesture-and-glow-portfolio.lovable.app
         run: |
           python3 - <<'PYTHON'
-          import os, pathlib, urllib.request
-          site = os.environ['SITE']
-          files = ['favicon.ico', 'index.html', 'placeholder.svg', 'robots.txt', 'assets/DronePathWithCameraView-ApVD3oGK.mp4', 'assets/Picam_with_yoloTinyV4-CN7v_Ive.mp4', 'assets/comparisions-BNWqHHg3.png', 'assets/detection-live-Dw9CQwn_.jpg', 'assets/index-Sd_f7mNC.css', 'assets/index-fZRvWfKw.js', 'assets/yolo-training-BMAwFHtS.png', 'models/avatar-male.glb', 'models/anim/M_Standing_Expressions_001.glb', 'models/anim/M_Standing_Expressions_013.glb', 'models/anim/M_Standing_Idle_001.glb', 'models/anim/M_Standing_Idle_Variations_002.glb', 'models/anim/M_Talking_Variations_001.glb', 'models/anim/M_Talking_Variations_005.glb']
+          import pathlib, urllib.request
+          site = 'https://gesture-and-glow-portfolio.lovable.app'
+          files = ['favicon.ico','index.html','placeholder.svg','robots.txt','assets/DronePathWithCameraView-ApVD3oGK.mp4','assets/Picam_with_yoloTinyV4-CN7v_Ive.mp4','assets/comparisions-BNWqHHg3.png','assets/detection-live-Dw9CQwn_.jpg','assets/index-Sd_f7mNC.css','assets/index-fZRvWfKw.js','assets/yolo-training-BMAwFHtS.png','models/avatar-male.glb','models/anim/M_Standing_Expressions_001.glb','models/anim/M_Standing_Expressions_013.glb','models/anim/M_Standing_Idle_001.glb','models/anim/M_Standing_Idle_Variations_002.glb','models/anim/M_Talking_Variations_001.glb','models/anim/M_Talking_Variations_005.glb']
           for name in files:
               path = pathlib.Path('dist') / name
               path.parent.mkdir(parents=True, exist_ok=True)
-              with urllib.request.urlopen(site + '/jaswanth.github.io/' + name) as response:
+              request = urllib.request.Request(site + '/jaswanth.github.io/' + name, headers={'User-Agent': 'Mozilla/5.0'})
+              with urllib.request.urlopen(request) as response:
                   data = response.read()
               if name.endswith('.js'):
                   text = data.decode().replace('https://project--d90829db-afef-434d-9f9a-db7bbf9ea58c.lovable.app', site)
