@@ -1,0 +1,37 @@
+name: Publish approved portfolio
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download approved portfolio
+        env:
+          SITE: https://gesture-and-glow-portfolio.lovable.app
+        run: |
+          python3 - <<'PYTHON'
+          import os, pathlib, urllib.request
+          site = os.environ['SITE']
+          files = ['favicon.ico', 'index.html', 'placeholder.svg', 'robots.txt', 'assets/DronePathWithCameraView-ApVD3oGK.mp4', 'assets/Picam_with_yoloTinyV4-CN7v_Ive.mp4', 'assets/comparisions-BNWqHHg3.png', 'assets/detection-live-Dw9CQwn_.jpg', 'assets/index-Sd_f7mNC.css', 'assets/index-fZRvWfKw.js', 'assets/yolo-training-BMAwFHtS.png', 'models/avatar-male.glb', 'models/anim/M_Standing_Expressions_001.glb', 'models/anim/M_Standing_Expressions_013.glb', 'models/anim/M_Standing_Idle_001.glb', 'models/anim/M_Standing_Idle_Variations_002.glb', 'models/anim/M_Talking_Variations_001.glb', 'models/anim/M_Talking_Variations_005.glb']
+          for name in files:
+              path = pathlib.Path('dist') / name
+              path.parent.mkdir(parents=True, exist_ok=True)
+              with urllib.request.urlopen(site + '/jaswanth.github.io/' + name) as response:
+                  data = response.read()
+              if name.endswith('.js'):
+                  text = data.decode().replace('https://project--d90829db-afef-434d-9f9a-db7bbf9ea58c.lovable.app', site)
+                  text = text.replace('/__l5e/assets-v1/6802b00f-0867-4b85-b646-707944d9923e/minuteClinic.mp4', site + '/__l5e/assets-v1/6802b00f-0867-4b85-b646-707944d9923e/minuteClinic.mp4')
+                  data = text.encode()
+              path.write_bytes(data)
+          pathlib.Path('dist/.nojekyll').touch()
+          PYTHON
+      - name: Publish to existing GitHub Pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          keep_files: true
+          commit_message: Publish approved resume and avatar portfolio
